@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Rapm | sort -d
+ls -apm
