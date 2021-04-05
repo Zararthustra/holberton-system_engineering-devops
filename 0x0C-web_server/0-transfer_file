@@ -1,4 +1,4 @@
-ed.!/usr/bin/env bash
+#!/usr/bin/env bash
 #Bash script that transfers a file from our client to a server
 
 if [ $# -eq 4 ];
