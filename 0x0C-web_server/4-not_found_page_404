@@ -6,7 +6,7 @@ sudo apt-get -y install nginx
 sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
 new_string="server_name _;\n\trewrite \/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;"
 sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
-sudo echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 new_stringg="server_name _;\n\terror_page 404 \/custom_404.html;"
 sudo sed -i "s/server_name _;/$new_stringg/" /etc/nginx/sites-available/default
 sudo service nginx restart
