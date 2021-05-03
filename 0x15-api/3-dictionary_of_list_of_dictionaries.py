@@ -9,16 +9,15 @@ if __name__ == "__main__":
     import json
     import requests
 
-    
     users_data = requests.get(
             'https://jsonplaceholder.typicode.com/users').json()
     json_dict = {}
-    
+
     for user in users_data:
         emp_id = user.get('id')
         tasks = requests.get(
                 'https://jsonplaceholder.typicode.com/todos?userId={}'
-                     .format(emp_id)).json()
+                .format(emp_id)).json()
         tasks_list = []
 
         for task in tasks:
